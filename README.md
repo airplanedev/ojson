@@ -7,7 +7,7 @@ Go's JSON (de-)serialization doesn't maintain the order of keys. Despite this be
 Thus, this library allows handling of ordered JSON data. Calling `json.Unmarshal()` on an `ojson.Value` behaves similarly to calling `json.Unmarshal()` on an `interface{}`, except that objects are unmarshaled to `*ojson.Object`, which is a struct containing a `map[string]interface{}` plus a key ordering. Furthermore, calling `json.Marshal()` on an `ojson.Object` outputs JSON that is serialized with the declared key ordering.
 
 ## Example
-```
+```go
 package main
 
 import (
