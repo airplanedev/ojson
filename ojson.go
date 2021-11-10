@@ -50,6 +50,10 @@ func (o *Object) Set(k string, v interface{}) {
 	o.values[k] = v
 }
 
+func (o *Object) KeyOrder() []string {
+	return o.keyOrder
+}
+
 // SetAndReturn is equivalent to Set, while returning a pointer to the Object.
 // Primarily used for creating Objects more easily, by allowing chaining of
 // multiple SetAndReturns.
